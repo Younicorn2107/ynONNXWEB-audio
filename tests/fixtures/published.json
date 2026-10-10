@@ -1,0 +1,380 @@
+{
+  "variant_for": {
+    "base": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/grain-int8-b32",
+      "int4": "onnx/sym-int4-asym"
+    },
+    "base.en": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/grain-int8-b64",
+      "int4": "onnx/plain-int4"
+    },
+    "distil-large-v2": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/zone-int4-attn"
+    },
+    "distil-large-v3": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "distil-large-v3.5": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "distil-medium.en": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/sym-int4-asym"
+    },
+    "distil-small.en": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/sym-int4-asym"
+    },
+    "large-v1": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "large-v2": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "large-v3": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "large-v3-turbo": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/plain-int4"
+    },
+    "medium": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "medium.en": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/sym-int4-asym"
+    },
+    "small": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b64"
+    },
+    "small.en": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/grain-int8-b64",
+      "int4": "onnx/zone-int4-cross"
+    },
+    "tiny": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/grain-int8-b64",
+      "int4": "onnx/sym-int4-asym-b32"
+    },
+    "tiny.en": {
+      "float32": null,
+      "float16": "onnx/fp16",
+      "int8": "onnx/plain-int8",
+      "int4": "onnx/grain-int4-b32"
+    }
+  },
+  "variant_for_role": {
+    "base": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/grain-int8-b32",
+        "int4": "onnx/sym-int4-asym"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/grain-int8-b32",
+        "int4": "onnx/sym-int4-asym"
+      }
+    },
+    "base.en": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/grain-int8-b64",
+        "int4": "onnx/plain-int4"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/grain-int8-b64",
+        "int4": "onnx/plain-int4"
+      }
+    },
+    "distil-large-v2": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/zone-int4-attn"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/zone-int4-attn"
+      }
+    },
+    "distil-large-v3": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "distil-large-v3.5": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "distil-medium.en": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/sym-int4-asym"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/sym-int4-asym"
+      }
+    },
+    "distil-small.en": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/sym-int4-asym"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/sym-int4-asym"
+      }
+    },
+    "large-v1": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "large-v2": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "large-v3": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "large-v3-turbo": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/plain-int4"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/plain-int4"
+      }
+    },
+    "medium": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "medium.en": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/sym-int4-asym"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/sym-int4-asym"
+      }
+    },
+    "small": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b64"
+      }
+    },
+    "small.en": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/grain-int8-b64",
+        "int4": "onnx/zone-int4-cross"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/grain-int8-b64",
+        "int4": "onnx/zone-int4-cross"
+      }
+    },
+    "tiny": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/grain-int8-b64",
+        "int4": "onnx/sym-int4-asym-b32"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/grain-int8-b64",
+        "int4": "onnx/sym-int4-asym-b32"
+      }
+    },
+    "tiny.en": {
+      "encoder": {
+        "float32": null,
+        "float16": "onnx/fp16",
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b32"
+      },
+      "decoder": {
+        "float32": "onnx/fp16",
+        "float16": null,
+        "int8": "onnx/plain-int8",
+        "int4": "onnx/grain-int4-b32"
+      }
+    }
+  },
+  "repo_for": {
+    "base": "Younicorn/whisper-base",
+    "base.en": "Younicorn/whisper-base.en",
+    "distil-large-v2": "Younicorn/distil-large-v2",
+    "distil-large-v3": "Younicorn/distil-large-v3",
+    "distil-large-v3.5": "Younicorn/distil-large-v3.5",
+    "distil-medium.en": "Younicorn/distil-medium.en",
+    "distil-small.en": "Younicorn/distil-small.en",
+    "large-v1": "Younicorn/whisper-large-v1",
+    "large-v2": "Younicorn/whisper-large-v2",
+    "large-v3": "Younicorn/whisper-large-v3",
+    "large-v3-turbo": "Younicorn/whisper-large-v3-turbo",
+    "medium": "Younicorn/whisper-medium",
+    "medium.en": "Younicorn/whisper-medium.en",
+    "small": "Younicorn/whisper-small",
+    "small.en": "Younicorn/whisper-small.en",
+    "tiny": "Younicorn/whisper-tiny",
+    "tiny.en": "Younicorn/whisper-tiny.en"
+  },
+  "named": {
+    "small@plain-int4": [
+      "small",
+      "onnx/plain-int4"
+    ],
+    "small@grain-int4-b64": [
+      "small",
+      "onnx/grain-int4-b64"
+    ],
+    "large-v3-turbo@algo-int4-hqq": [
+      "large-v3-turbo",
+      "onnx/algo-int4-hqq"
+    ],
+    "tiny": null
+  }
+}

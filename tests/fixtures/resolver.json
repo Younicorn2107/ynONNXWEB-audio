@@ -1,0 +1,3929 @@
+{
+  "tables": {
+    "base": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.12,
+            "mix_decoder-float32_encoder-int4": 3.75,
+            "mix_decoder-float32_encoder-int8": 3.12,
+            "mix_decoder-int4_encoder-float16": 3.95,
+            "mix_decoder-int4_encoder-int4": 3.75,
+            "mix_decoder-int4_encoder-int8": 5.2,
+            "mix_decoder-int8_encoder-float16": 3.02,
+            "mix_decoder-int8_encoder-int4": 3.85,
+            "mix_decoder-int8_encoder-int8": 4.06
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.12,
+            "mix_decoder-float32_encoder-int8": 3.12,
+            "mix_decoder-int4_encoder-float16": 4.58,
+            "mix_decoder-int4_encoder-int8": 4.47,
+            "mix_decoder-int8_encoder-float16": 3.02,
+            "mix_decoder-int8_encoder-int8": 4.06
+          },
+          "other": {
+            "mix_decoder-float32_encoder-float16": 17.63,
+            "mix_decoder-float32_encoder-int8": 18.31,
+            "mix_decoder-int4_encoder-float16": 18.74,
+            "mix_decoder-int4_encoder-int8": 21.31,
+            "mix_decoder-int8_encoder-float16": 17.29,
+            "mix_decoder-int8_encoder-int8": 18.21
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 4.99,
+          "mix_decoder-float32_encoder-int4": 11.97,
+          "mix_decoder-float32_encoder-int8": 22.71,
+          "mix_decoder-int4_encoder-float16": 5.43,
+          "mix_decoder-int4_encoder-int4": 16.15,
+          "mix_decoder-int4_encoder-int8": 10.41,
+          "mix_decoder-int8_encoder-float16": 2.0,
+          "mix_decoder-int8_encoder-int4": 6.25,
+          "mix_decoder-int8_encoder-int8": 4.72
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 32.49,
+          "mix_decoder-float32_encoder-int8": 25.78,
+          "mix_decoder-int4_encoder-float16": 14.58,
+          "mix_decoder-int4_encoder-int8": 13.14,
+          "mix_decoder-int8_encoder-float16": 30.27,
+          "mix_decoder-int8_encoder-int8": 27.75
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 288.7,
+        "mix_decoder-float32_encoder-int4": 268.4,
+        "mix_decoder-float32_encoder-int8": 292.4,
+        "mix_decoder-int4_encoder-float16": 98.3,
+        "mix_decoder-int4_encoder-int4": 78.0,
+        "mix_decoder-int4_encoder-int8": 102.0,
+        "mix_decoder-int8_encoder-float16": 140.9,
+        "mix_decoder-int8_encoder-int4": 120.6,
+        "mix_decoder-int8_encoder-int8": 144.6
+      },
+      "failed": {}
+    },
+    "base.en": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.75,
+            "mix_decoder-float32_encoder-int4": 2.71,
+            "mix_decoder-float32_encoder-int8": 3.64,
+            "mix_decoder-int4_encoder-float16": 3.54,
+            "mix_decoder-int4_encoder-int4": 3.43,
+            "mix_decoder-int4_encoder-int8": 3.33,
+            "mix_decoder-int8_encoder-float16": 4.06,
+            "mix_decoder-int8_encoder-int4": 2.6,
+            "mix_decoder-int8_encoder-int8": 4.16
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.75,
+            "mix_decoder-float32_encoder-int8": 3.64,
+            "mix_decoder-int4_encoder-float16": 3.54,
+            "mix_decoder-int4_encoder-int8": 3.23,
+            "mix_decoder-int8_encoder-float16": 4.06,
+            "mix_decoder-int8_encoder-int8": 4.16
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 5.33,
+          "mix_decoder-float32_encoder-int4": 10.68,
+          "mix_decoder-float32_encoder-int8": 20.86,
+          "mix_decoder-int4_encoder-float16": 2.54,
+          "mix_decoder-int4_encoder-int4": 5.01,
+          "mix_decoder-int4_encoder-int8": 3.49,
+          "mix_decoder-int8_encoder-float16": 2.8,
+          "mix_decoder-int8_encoder-int4": 5.02,
+          "mix_decoder-int8_encoder-int8": 3.39
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 52.26,
+          "mix_decoder-float32_encoder-int8": 55.23,
+          "mix_decoder-int4_encoder-float16": 44.59,
+          "mix_decoder-int4_encoder-int8": 45.85,
+          "mix_decoder-int8_encoder-float16": 57.86,
+          "mix_decoder-int8_encoder-int8": 55.23
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 288.7,
+        "mix_decoder-float32_encoder-int4": 266.1,
+        "mix_decoder-float32_encoder-int8": 275.1,
+        "mix_decoder-int4_encoder-float16": 94.0,
+        "mix_decoder-int4_encoder-int4": 71.4,
+        "mix_decoder-int4_encoder-int8": 80.4,
+        "mix_decoder-int8_encoder-float16": 118.7,
+        "mix_decoder-int8_encoder-int4": 96.1,
+        "mix_decoder-int8_encoder-int8": 105.1
+      },
+      "failed": {}
+    },
+    "distil-large-v2": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 4.79,
+            "mix_decoder-float32_encoder-int4": 7.39,
+            "mix_decoder-float32_encoder-int8": 4.79,
+            "mix_decoder-int4_encoder-float16": 6.87,
+            "mix_decoder-int4_encoder-int4": 6.04,
+            "mix_decoder-int4_encoder-int8": 7.08,
+            "mix_decoder-int8_encoder-float16": 4.79,
+            "mix_decoder-int8_encoder-int4": 6.14,
+            "mix_decoder-int8_encoder-int8": 4.79
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 4.79,
+            "mix_decoder-float32_encoder-int8": 4.89,
+            "mix_decoder-int4_encoder-float16": 6.35,
+            "mix_decoder-int4_encoder-int8": 6.45,
+            "mix_decoder-int8_encoder-float16": 4.79,
+            "mix_decoder-int8_encoder-int8": 4.79
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.4,
+          "mix_decoder-float32_encoder-int4": 1.63,
+          "mix_decoder-float32_encoder-int8": 1.65,
+          "mix_decoder-int4_encoder-float16": 0.41,
+          "mix_decoder-int4_encoder-int4": 2.98,
+          "mix_decoder-int4_encoder-int8": 2.93,
+          "mix_decoder-int8_encoder-float16": 0.36,
+          "mix_decoder-int8_encoder-int4": 1.62,
+          "mix_decoder-int8_encoder-int8": 1.44
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 55.86,
+          "mix_decoder-float32_encoder-int8": 53.41,
+          "mix_decoder-int4_encoder-float16": 25.45,
+          "mix_decoder-int4_encoder-int8": 25.99,
+          "mix_decoder-int8_encoder-float16": 48.6,
+          "mix_decoder-int8_encoder-int8": 44.18
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 1797.3,
+        "mix_decoder-float32_encoder-int4": 1024.6,
+        "mix_decoder-float32_encoder-int8": 1230.6,
+        "mix_decoder-int4_encoder-float16": 1352.9,
+        "mix_decoder-int4_encoder-int4": 580.3,
+        "mix_decoder-int4_encoder-int8": 786.3,
+        "mix_decoder-int8_encoder-float16": 1397.8,
+        "mix_decoder-int8_encoder-int4": 625.1,
+        "mix_decoder-int8_encoder-int8": 831.1
+      },
+      "failed": {}
+    },
+    "distil-large-v3": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 7.49,
+            "mix_decoder-float32_encoder-int4": 3.23,
+            "mix_decoder-float32_encoder-int8": 7.49,
+            "mix_decoder-int4_encoder-float16": 3.85,
+            "mix_decoder-int4_encoder-int4": 5.2,
+            "mix_decoder-int4_encoder-int8": 3.85,
+            "mix_decoder-int8_encoder-float16": 4.37,
+            "mix_decoder-int8_encoder-int4": 3.33,
+            "mix_decoder-int8_encoder-int8": 3.43
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 7.49,
+            "mix_decoder-float32_encoder-int8": 7.49,
+            "mix_decoder-int4_encoder-float16": 3.85,
+            "mix_decoder-int4_encoder-int8": 4.89,
+            "mix_decoder-int8_encoder-float16": 3.54,
+            "mix_decoder-int8_encoder-int8": 3.43
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.44,
+          "mix_decoder-float32_encoder-int4": 1.7,
+          "mix_decoder-float32_encoder-int8": 1.7,
+          "mix_decoder-int4_encoder-float16": 0.42,
+          "mix_decoder-int4_encoder-int4": 2.83,
+          "mix_decoder-int4_encoder-int8": 2.91,
+          "mix_decoder-int8_encoder-float16": 0.38,
+          "mix_decoder-int8_encoder-int4": 1.7,
+          "mix_decoder-int8_encoder-int8": 1.55
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 55.23,
+          "mix_decoder-float32_encoder-int8": 54.61,
+          "mix_decoder-int4_encoder-float16": 49.09,
+          "mix_decoder-int4_encoder-int8": 42.63,
+          "mix_decoder-int8_encoder-float16": 55.86,
+          "mix_decoder-int8_encoder-int8": 45.0
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 1797.7,
+        "mix_decoder-float32_encoder-int4": 950.1,
+        "mix_decoder-float32_encoder-int8": 1231.4,
+        "mix_decoder-int4_encoder-float16": 1345.0,
+        "mix_decoder-int4_encoder-int4": 497.5,
+        "mix_decoder-int4_encoder-int8": 778.7,
+        "mix_decoder-int8_encoder-float16": 1398.2,
+        "mix_decoder-int8_encoder-int4": 550.6,
+        "mix_decoder-int8_encoder-int8": 831.9
+      },
+      "failed": {}
+    },
+    "distil-large-v3.5": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.95,
+            "mix_decoder-float32_encoder-int4": 3.33,
+            "mix_decoder-float32_encoder-int8": 3.95,
+            "mix_decoder-int4_encoder-int4": 4.58,
+            "mix_decoder-int8_encoder-float16": 4.37,
+            "mix_decoder-int8_encoder-int4": 3.95,
+            "mix_decoder-int8_encoder-int8": 4.37
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.95,
+            "mix_decoder-float32_encoder-int8": 3.95,
+            "mix_decoder-int4_encoder-float16": 4.99,
+            "mix_decoder-int8_encoder-float16": 4.16,
+            "mix_decoder-int8_encoder-int8": 4.16
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.43,
+          "mix_decoder-float32_encoder-int4": 1.78,
+          "mix_decoder-float32_encoder-int8": 1.66,
+          "mix_decoder-int4_encoder-int4": 2.61,
+          "mix_decoder-int8_encoder-float16": 0.37,
+          "mix_decoder-int8_encoder-int4": 1.68,
+          "mix_decoder-int8_encoder-int8": 1.62
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 54.0,
+          "mix_decoder-float32_encoder-int8": 51.16,
+          "mix_decoder-int4_encoder-float16": 44.59,
+          "mix_decoder-int8_encoder-float16": 44.59,
+          "mix_decoder-int8_encoder-int8": 44.18
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 1797.7,
+        "mix_decoder-float32_encoder-int4": 950.1,
+        "mix_decoder-float32_encoder-int8": 1231.4,
+        "mix_decoder-int4_encoder-float16": 1345.0,
+        "mix_decoder-int4_encoder-int4": 497.5,
+        "mix_decoder-int8_encoder-float16": 1398.2,
+        "mix_decoder-int8_encoder-int4": 550.6,
+        "mix_decoder-int8_encoder-int8": 831.9
+      },
+      "failed": {
+        "wasm": [
+          "mix_decoder-int4_encoder-float16",
+          "mix_decoder-int4_encoder-int8"
+        ],
+        "webgpu": [
+          "mix_decoder-int4_encoder-int8"
+        ]
+      }
+    },
+    "distil-medium.en": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 7.39,
+            "mix_decoder-float32_encoder-int4": 8.43,
+            "mix_decoder-float32_encoder-int8": 10.3,
+            "mix_decoder-int4_encoder-float16": 6.97,
+            "mix_decoder-int4_encoder-int4": 12.8,
+            "mix_decoder-int4_encoder-int8": 10.51,
+            "mix_decoder-int8_encoder-float16": 6.97,
+            "mix_decoder-int8_encoder-int4": 10.93,
+            "mix_decoder-int8_encoder-int8": 11.45
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 7.39,
+            "mix_decoder-float32_encoder-int8": 7.39,
+            "mix_decoder-int4_encoder-float16": 7.08,
+            "mix_decoder-int4_encoder-int8": 10.2,
+            "mix_decoder-int8_encoder-float16": 8.43,
+            "mix_decoder-int8_encoder-int8": 11.45
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.73,
+          "mix_decoder-float32_encoder-int4": 2.61,
+          "mix_decoder-float32_encoder-int8": 2.58,
+          "mix_decoder-int4_encoder-float16": 0.73,
+          "mix_decoder-int4_encoder-int4": 4.82,
+          "mix_decoder-int4_encoder-int8": 4.43,
+          "mix_decoder-int8_encoder-float16": 0.59,
+          "mix_decoder-int8_encoder-int4": 2.39,
+          "mix_decoder-int8_encoder-int8": 2.24
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 79.67,
+          "mix_decoder-float32_encoder-int8": 77.14,
+          "mix_decoder-int4_encoder-float16": 79.67,
+          "mix_decoder-int4_encoder-int8": 78.39,
+          "mix_decoder-int8_encoder-float16": 75.94,
+          "mix_decoder-int8_encoder-int8": 57.86
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 1020.1,
+        "mix_decoder-float32_encoder-int4": 608.2,
+        "mix_decoder-float32_encoder-int8": 751.1,
+        "mix_decoder-int4_encoder-float16": 683.3,
+        "mix_decoder-int4_encoder-int4": 271.4,
+        "mix_decoder-int4_encoder-int8": 414.3,
+        "mix_decoder-int8_encoder-float16": 724.3,
+        "mix_decoder-int8_encoder-int4": 312.4,
+        "mix_decoder-int8_encoder-int8": 455.3
+      },
+      "failed": {}
+    },
+    "distil-small.en": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 14.78,
+            "mix_decoder-float32_encoder-int4": 14.98,
+            "mix_decoder-float32_encoder-int8": 13.63,
+            "mix_decoder-int4_encoder-float16": 19.04,
+            "mix_decoder-int4_encoder-int4": 9.68,
+            "mix_decoder-int4_encoder-int8": 19.35,
+            "mix_decoder-int8_encoder-float16": 9.05,
+            "mix_decoder-int8_encoder-int8": 9.05
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 14.78,
+            "mix_decoder-float32_encoder-int8": 12.38,
+            "mix_decoder-int4_encoder-float16": 19.04,
+            "mix_decoder-int4_encoder-int8": 19.35,
+            "mix_decoder-int8_encoder-float16": 9.05,
+            "mix_decoder-int8_encoder-int8": 9.05
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 2.06,
+          "mix_decoder-float32_encoder-int4": 5.92,
+          "mix_decoder-float32_encoder-int8": 6.33,
+          "mix_decoder-int4_encoder-float16": 1.41,
+          "mix_decoder-int4_encoder-int4": 8.77,
+          "mix_decoder-int4_encoder-int8": 7.84,
+          "mix_decoder-int8_encoder-float16": 1.26,
+          "mix_decoder-int8_encoder-int8": 3.2
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 60.75,
+          "mix_decoder-float32_encoder-int8": 60.75,
+          "mix_decoder-int4_encoder-float16": 59.27,
+          "mix_decoder-int4_encoder-int8": 70.44,
+          "mix_decoder-int8_encoder-float16": 63.95,
+          "mix_decoder-int8_encoder-int8": 46.29
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 541.9,
+        "mix_decoder-float32_encoder-int4": 429.4,
+        "mix_decoder-float32_encoder-int8": 469.6,
+        "mix_decoder-int4_encoder-float16": 247.8,
+        "mix_decoder-int4_encoder-int4": 135.3,
+        "mix_decoder-int4_encoder-int8": 175.5,
+        "mix_decoder-int8_encoder-float16": 284.5,
+        "mix_decoder-int8_encoder-int8": 212.2
+      },
+      "failed": {
+        "wasm": [
+          "mix_decoder-int8_encoder-int4"
+        ]
+      }
+    },
+    "large-v1": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.81,
+            "mix_decoder-float32_encoder-int4": 2.91,
+            "mix_decoder-float32_encoder-int8": 2.81,
+            "mix_decoder-int4_encoder-float16": 3.64,
+            "mix_decoder-int4_encoder-int4": 2.91,
+            "mix_decoder-int4_encoder-int8": 3.64,
+            "mix_decoder-int8_encoder-float16": 2.81,
+            "mix_decoder-int8_encoder-int4": 3.54,
+            "mix_decoder-int8_encoder-int8": 2.81
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.81,
+            "mix_decoder-float32_encoder-int8": 2.81,
+            "mix_decoder-int4_encoder-float16": 3.64,
+            "mix_decoder-int4_encoder-int8": 3.64,
+            "mix_decoder-int8_encoder-float16": 2.81,
+            "mix_decoder-int8_encoder-int8": 2.81
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.36,
+          "mix_decoder-float32_encoder-int4": 0.77,
+          "mix_decoder-float32_encoder-int8": 0.88,
+          "mix_decoder-int4_encoder-float16": 0.35,
+          "mix_decoder-int4_encoder-int4": 1.51,
+          "mix_decoder-int4_encoder-int8": 1.45,
+          "mix_decoder-int8_encoder-float16": 0.21,
+          "mix_decoder-int8_encoder-int4": 0.34,
+          "mix_decoder-int8_encoder-int8": 0.37
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 10.61,
+          "mix_decoder-float32_encoder-int8": 3.04,
+          "mix_decoder-int4_encoder-float16": 15.38,
+          "mix_decoder-int4_encoder-int8": 14.82,
+          "mix_decoder-int8_encoder-float16": 16.53,
+          "mix_decoder-int8_encoder-int8": 16.47
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 8239.5,
+        "mix_decoder-float32_encoder-int4": 7391.6,
+        "mix_decoder-float32_encoder-int8": 7672.8,
+        "mix_decoder-int4_encoder-float16": 2268.4,
+        "mix_decoder-int4_encoder-int4": 1420.5,
+        "mix_decoder-int4_encoder-int8": 1701.8,
+        "mix_decoder-int8_encoder-float16": 3030.9,
+        "mix_decoder-int8_encoder-int4": 2183.0,
+        "mix_decoder-int8_encoder-int8": 2464.2
+      },
+      "failed": {}
+    },
+    "large-v2": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.29,
+            "mix_decoder-float32_encoder-int4": 2.5,
+            "mix_decoder-float32_encoder-int8": 2.5,
+            "mix_decoder-int4_encoder-float16": 3.54,
+            "mix_decoder-int4_encoder-int4": 3.02,
+            "mix_decoder-int4_encoder-int8": 3.54,
+            "mix_decoder-int8_encoder-float16": 2.19,
+            "mix_decoder-int8_encoder-int4": 2.08,
+            "mix_decoder-int8_encoder-int8": 2.19
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.19,
+            "mix_decoder-float32_encoder-int8": 2.19,
+            "mix_decoder-int4_encoder-float16": 3.54,
+            "mix_decoder-int4_encoder-int8": 3.54,
+            "mix_decoder-int8_encoder-float16": 2.08,
+            "mix_decoder-int8_encoder-int8": 2.19
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.29,
+          "mix_decoder-float32_encoder-int4": 0.73,
+          "mix_decoder-float32_encoder-int8": 0.69,
+          "mix_decoder-int4_encoder-float16": 0.37,
+          "mix_decoder-int4_encoder-int4": 1.52,
+          "mix_decoder-int4_encoder-int8": 1.53,
+          "mix_decoder-int8_encoder-float16": 0.19,
+          "mix_decoder-int8_encoder-int4": 0.37,
+          "mix_decoder-int8_encoder-int8": 0.16
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 10.13,
+          "mix_decoder-float32_encoder-int8": 6.23,
+          "mix_decoder-int4_encoder-float16": 16.47,
+          "mix_decoder-int4_encoder-int8": 15.43,
+          "mix_decoder-int8_encoder-float16": 10.36,
+          "mix_decoder-int8_encoder-int8": 7.54
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 8239.5,
+        "mix_decoder-float32_encoder-int4": 7391.6,
+        "mix_decoder-float32_encoder-int8": 7672.8,
+        "mix_decoder-int4_encoder-float16": 2268.4,
+        "mix_decoder-int4_encoder-int4": 1420.5,
+        "mix_decoder-int4_encoder-int8": 1701.8,
+        "mix_decoder-int8_encoder-float16": 3030.9,
+        "mix_decoder-int8_encoder-int4": 2183.0,
+        "mix_decoder-int8_encoder-int8": 2464.2
+      },
+      "failed": {}
+    },
+    "large-v3": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.64,
+            "mix_decoder-float32_encoder-int4": 3.12,
+            "mix_decoder-float32_encoder-int8": 3.64,
+            "mix_decoder-int4_encoder-float16": 2.6,
+            "mix_decoder-int4_encoder-int4": 2.08,
+            "mix_decoder-int4_encoder-int8": 2.6,
+            "mix_decoder-int8_encoder-float16": 3.54,
+            "mix_decoder-int8_encoder-int4": 3.23,
+            "mix_decoder-int8_encoder-int8": 3.85
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 1.98,
+            "mix_decoder-float32_encoder-int8": 1.98,
+            "mix_decoder-int4_encoder-float16": 2.6,
+            "mix_decoder-int4_encoder-int8": 2.6,
+            "mix_decoder-int8_encoder-float16": 3.64,
+            "mix_decoder-int8_encoder-int8": 3.85
+          },
+          "other": {
+            "mix_decoder-float32_encoder-float16": 7.22,
+            "mix_decoder-float32_encoder-int8": 7.26,
+            "mix_decoder-int4_encoder-float16": 8.52,
+            "mix_decoder-int4_encoder-int8": 8.43,
+            "mix_decoder-int8_encoder-float16": 7.7,
+            "mix_decoder-int8_encoder-int8": 7.26
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.36,
+          "mix_decoder-float32_encoder-int4": 0.83,
+          "mix_decoder-float32_encoder-int8": 1.57,
+          "mix_decoder-int4_encoder-float16": 0.32,
+          "mix_decoder-int4_encoder-int4": 1.41,
+          "mix_decoder-int4_encoder-int8": 1.56,
+          "mix_decoder-int8_encoder-float16": 0.21,
+          "mix_decoder-int8_encoder-int4": 0.41,
+          "mix_decoder-int8_encoder-int8": 0.4
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 0.95,
+          "mix_decoder-float32_encoder-int8": 3.22,
+          "mix_decoder-int4_encoder-float16": 8.67,
+          "mix_decoder-int4_encoder-int8": 8.25,
+          "mix_decoder-int8_encoder-float16": 9.35,
+          "mix_decoder-int8_encoder-int8": 8.85
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 8239.8,
+        "mix_decoder-float32_encoder-int4": 7392.3,
+        "mix_decoder-float32_encoder-int8": 7673.5,
+        "mix_decoder-int4_encoder-float16": 2268.8,
+        "mix_decoder-int4_encoder-int4": 1421.2,
+        "mix_decoder-int4_encoder-int8": 1702.5,
+        "mix_decoder-int8_encoder-float16": 3031.3,
+        "mix_decoder-int8_encoder-int4": 2183.7,
+        "mix_decoder-int8_encoder-int8": 2465.0
+      },
+      "failed": {}
+    },
+    "large-v3-turbo": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 1.98,
+            "mix_decoder-float32_encoder-int4": 2.71,
+            "mix_decoder-float32_encoder-int8": 2.29,
+            "mix_decoder-int4_encoder-float16": 2.19,
+            "mix_decoder-int4_encoder-int4": 2.29,
+            "mix_decoder-int4_encoder-int8": 2.39,
+            "mix_decoder-int8_encoder-float16": 2.19,
+            "mix_decoder-int8_encoder-int4": 2.6,
+            "mix_decoder-int8_encoder-int8": 3.64
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.19,
+            "mix_decoder-float32_encoder-int8": 2.29,
+            "mix_decoder-int4_encoder-float16": 2.39,
+            "mix_decoder-int4_encoder-int8": 2.81,
+            "mix_decoder-int8_encoder-float16": 2.29,
+            "mix_decoder-int8_encoder-int8": 3.64
+          },
+          "other": {
+            "mix_decoder-float32_encoder-float16": 7.31,
+            "mix_decoder-float32_encoder-int8": 6.97,
+            "mix_decoder-int4_encoder-float16": 7.55,
+            "mix_decoder-int4_encoder-int8": 7.46,
+            "mix_decoder-int8_encoder-float16": 7.36,
+            "mix_decoder-int8_encoder-int8": 7.31
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.41,
+          "mix_decoder-float32_encoder-int4": 1.52,
+          "mix_decoder-float32_encoder-int8": 2.57,
+          "mix_decoder-int4_encoder-float16": 0.3,
+          "mix_decoder-int4_encoder-int4": 1.58,
+          "mix_decoder-int4_encoder-int8": 1.13,
+          "mix_decoder-int8_encoder-float16": 0.27,
+          "mix_decoder-int8_encoder-int4": 1.78,
+          "mix_decoder-int8_encoder-int8": 1.53
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 27.94,
+          "mix_decoder-float32_encoder-int8": 27.46,
+          "mix_decoder-int4_encoder-float16": 26.91,
+          "mix_decoder-int4_encoder-int8": 15.63,
+          "mix_decoder-int8_encoder-float16": 27.85,
+          "mix_decoder-int8_encoder-int8": 24.22
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 1744.7,
+        "mix_decoder-float32_encoder-int4": 897.1,
+        "mix_decoder-float32_encoder-int8": 1178.4,
+        "mix_decoder-int4_encoder-float16": 1337.8,
+        "mix_decoder-int4_encoder-int4": 490.3,
+        "mix_decoder-int4_encoder-int8": 771.5,
+        "mix_decoder-int8_encoder-float16": 1384.7,
+        "mix_decoder-int8_encoder-int4": 537.1,
+        "mix_decoder-int8_encoder-int8": 818.4
+      },
+      "failed": {}
+    },
+    "medium": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.19,
+            "mix_decoder-float32_encoder-int4": 2.39,
+            "mix_decoder-float32_encoder-int8": 2.19,
+            "mix_decoder-int4_encoder-float16": 2.6,
+            "mix_decoder-int4_encoder-int4": 2.5,
+            "mix_decoder-int4_encoder-int8": 2.6,
+            "mix_decoder-int8_encoder-float16": 2.19,
+            "mix_decoder-int8_encoder-int4": 2.39,
+            "mix_decoder-int8_encoder-int8": 2.19
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.19,
+            "mix_decoder-float32_encoder-int8": 2.19,
+            "mix_decoder-int4_encoder-float16": 2.6,
+            "mix_decoder-int4_encoder-int8": 2.6,
+            "mix_decoder-int8_encoder-float16": 2.19,
+            "mix_decoder-int8_encoder-int8": 2.19
+          },
+          "other": {
+            "mix_decoder-float32_encoder-float16": 7.8,
+            "mix_decoder-float32_encoder-int8": 7.8,
+            "mix_decoder-int4_encoder-float16": 7.7,
+            "mix_decoder-int4_encoder-int8": 8.04,
+            "mix_decoder-int8_encoder-float16": 8.04,
+            "mix_decoder-int8_encoder-int8": 8.04
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.52,
+          "mix_decoder-float32_encoder-int4": 1.52,
+          "mix_decoder-float32_encoder-int8": 2.57,
+          "mix_decoder-int4_encoder-float16": 0.64,
+          "mix_decoder-int4_encoder-int4": 2.86,
+          "mix_decoder-int4_encoder-int8": 2.44,
+          "mix_decoder-int8_encoder-float16": 0.32,
+          "mix_decoder-int8_encoder-int4": 0.78,
+          "mix_decoder-int8_encoder-int8": 0.69
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 9.98,
+          "mix_decoder-float32_encoder-int8": 9.44,
+          "mix_decoder-int4_encoder-float16": 10.09,
+          "mix_decoder-int4_encoder-int8": 10.87,
+          "mix_decoder-int8_encoder-float16": 9.77,
+          "mix_decoder-int8_encoder-int8": 9.93
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 2430.8,
+        "mix_decoder-float32_encoder-int4": 2026.8,
+        "mix_decoder-float32_encoder-int8": 2161.8,
+        "mix_decoder-int4_encoder-float16": 886.3,
+        "mix_decoder-int4_encoder-int4": 482.2,
+        "mix_decoder-int4_encoder-int8": 617.2,
+        "mix_decoder-int8_encoder-float16": 1090.0,
+        "mix_decoder-int8_encoder-int4": 686.0,
+        "mix_decoder-int8_encoder-int8": 821.0
+      },
+      "failed": {}
+    },
+    "medium.en": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.19,
+            "mix_decoder-float32_encoder-int4": 2.19,
+            "mix_decoder-float32_encoder-int8": 2.19,
+            "mix_decoder-int4_encoder-float16": 2.39,
+            "mix_decoder-int4_encoder-int4": 2.29,
+            "mix_decoder-int4_encoder-int8": 2.39,
+            "mix_decoder-int8_encoder-float16": 2.29,
+            "mix_decoder-int8_encoder-int4": 2.19,
+            "mix_decoder-int8_encoder-int8": 2.29
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 2.19,
+            "mix_decoder-float32_encoder-int8": 2.19,
+            "mix_decoder-int4_encoder-float16": 2.29,
+            "mix_decoder-int4_encoder-int8": 2.6,
+            "mix_decoder-int8_encoder-float16": 2.71,
+            "mix_decoder-int8_encoder-int8": 2.29
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 0.54,
+          "mix_decoder-float32_encoder-int4": 1.41,
+          "mix_decoder-float32_encoder-int8": 1.63,
+          "mix_decoder-int4_encoder-float16": 0.61,
+          "mix_decoder-int4_encoder-int4": 3.1,
+          "mix_decoder-int4_encoder-int8": 2.79,
+          "mix_decoder-int8_encoder-float16": 0.39,
+          "mix_decoder-int8_encoder-int4": 0.7,
+          "mix_decoder-int8_encoder-int8": 0.66
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 14.13,
+          "mix_decoder-float32_encoder-int8": 17.36,
+          "mix_decoder-int4_encoder-float16": 8.79,
+          "mix_decoder-int4_encoder-int8": 9.66,
+          "mix_decoder-int8_encoder-float16": 14.55,
+          "mix_decoder-int8_encoder-int8": 20.34
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 2430.8,
+        "mix_decoder-float32_encoder-int4": 2062.9,
+        "mix_decoder-float32_encoder-int8": 2161.7,
+        "mix_decoder-int4_encoder-float16": 963.5,
+        "mix_decoder-int4_encoder-int4": 595.7,
+        "mix_decoder-int4_encoder-int8": 694.5,
+        "mix_decoder-int8_encoder-float16": 1090.0,
+        "mix_decoder-int8_encoder-int4": 722.2,
+        "mix_decoder-int8_encoder-int8": 821.0
+      },
+      "failed": {}
+    },
+    "small": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.33,
+            "mix_decoder-float32_encoder-int4": 2.39,
+            "mix_decoder-float32_encoder-int8": 2.29,
+            "mix_decoder-int4_encoder-float16": 2.19,
+            "mix_decoder-int4_encoder-int4": 2.71,
+            "mix_decoder-int4_encoder-int8": 2.19,
+            "mix_decoder-int8_encoder-float16": 2.29,
+            "mix_decoder-int8_encoder-int4": 2.81,
+            "mix_decoder-int8_encoder-int8": 2.39
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 3.33,
+            "mix_decoder-float32_encoder-int8": 2.29,
+            "mix_decoder-int8_encoder-float16": 2.29,
+            "mix_decoder-int8_encoder-int8": 2.29
+          },
+          "other": {
+            "mix_decoder-float32_encoder-float16": 10.02,
+            "mix_decoder-float32_encoder-int8": 10.36,
+            "mix_decoder-int8_encoder-float16": 9.44,
+            "mix_decoder-int8_encoder-int8": 9.35
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 1.58,
+          "mix_decoder-float32_encoder-int4": 4.3,
+          "mix_decoder-float32_encoder-int8": 7.81,
+          "mix_decoder-int4_encoder-float16": 1.72,
+          "mix_decoder-int4_encoder-int4": 5.9,
+          "mix_decoder-int4_encoder-int8": 5.54,
+          "mix_decoder-int8_encoder-float16": 0.67,
+          "mix_decoder-int8_encoder-int4": 2.33,
+          "mix_decoder-int8_encoder-int8": 1.96
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 18.94,
+          "mix_decoder-float32_encoder-int8": 17.04,
+          "mix_decoder-int8_encoder-float16": 22.14,
+          "mix_decoder-int8_encoder-int8": 19.68
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 678.8,
+        "mix_decoder-float32_encoder-int4": 578.7,
+        "mix_decoder-float32_encoder-int8": 606.5,
+        "mix_decoder-int4_encoder-float16": 283.6,
+        "mix_decoder-int4_encoder-int4": 183.6,
+        "mix_decoder-int4_encoder-int8": 211.3,
+        "mix_decoder-int8_encoder-float16": 320.4,
+        "mix_decoder-int8_encoder-int4": 220.3,
+        "mix_decoder-int8_encoder-int8": 248.1
+      },
+      "failed": {
+        "webgpu": [
+          "mix_decoder-int4_encoder-float16",
+          "mix_decoder-int4_encoder-int8"
+        ]
+      }
+    },
+    "small.en": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 1.98,
+            "mix_decoder-float32_encoder-int4": 3.23,
+            "mix_decoder-float32_encoder-int8": 1.98,
+            "mix_decoder-int4_encoder-float16": 2.29,
+            "mix_decoder-int4_encoder-int4": 2.39,
+            "mix_decoder-int4_encoder-int8": 2.08,
+            "mix_decoder-int8_encoder-float16": 2.5,
+            "mix_decoder-int8_encoder-int4": 3.23,
+            "mix_decoder-int8_encoder-int8": 2.08
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 1.98,
+            "mix_decoder-float32_encoder-int8": 1.98,
+            "mix_decoder-int8_encoder-float16": 2.19,
+            "mix_decoder-int8_encoder-int8": 2.08
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 1.79,
+          "mix_decoder-float32_encoder-int4": 4.07,
+          "mix_decoder-float32_encoder-int8": 7.31,
+          "mix_decoder-int4_encoder-float16": 1.49,
+          "mix_decoder-int4_encoder-int4": 5.18,
+          "mix_decoder-int4_encoder-int8": 5.01,
+          "mix_decoder-int8_encoder-float16": 0.89,
+          "mix_decoder-int8_encoder-int4": 1.79,
+          "mix_decoder-int8_encoder-int8": 1.79
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 29.46,
+          "mix_decoder-float32_encoder-int8": 32.19,
+          "mix_decoder-int8_encoder-float16": 35.22,
+          "mix_decoder-int8_encoder-int8": 36.27
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 830.8,
+        "mix_decoder-float32_encoder-int4": 717.9,
+        "mix_decoder-float32_encoder-int8": 761.0,
+        "mix_decoder-int4_encoder-float16": 299.6,
+        "mix_decoder-int4_encoder-int4": 186.8,
+        "mix_decoder-int4_encoder-int8": 229.8,
+        "mix_decoder-int8_encoder-float16": 364.2,
+        "mix_decoder-int8_encoder-int4": 251.3,
+        "mix_decoder-int8_encoder-int8": 294.4
+      },
+      "failed": {
+        "webgpu": [
+          "mix_decoder-int4_encoder-float16",
+          "mix_decoder-int4_encoder-int8"
+        ]
+      }
+    },
+    "tiny": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 4.79,
+            "mix_decoder-float32_encoder-int4": 7.18,
+            "mix_decoder-float32_encoder-int8": 4.68,
+            "mix_decoder-int4_encoder-float16": 6.76,
+            "mix_decoder-int4_encoder-int4": 7.91,
+            "mix_decoder-int4_encoder-int8": 6.14,
+            "mix_decoder-int8_encoder-float16": 5.1,
+            "mix_decoder-int8_encoder-int4": 6.45,
+            "mix_decoder-int8_encoder-int8": 4.47
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 5.2,
+            "mix_decoder-float32_encoder-int8": 4.68,
+            "mix_decoder-int4_encoder-float16": 6.76,
+            "mix_decoder-int4_encoder-int8": 6.14,
+            "mix_decoder-int8_encoder-float16": 5.1,
+            "mix_decoder-int8_encoder-int8": 4.47
+          },
+          "other": {
+            "mix_decoder-float32_encoder-float16": 31.57,
+            "mix_decoder-float32_encoder-int8": 29.59,
+            "mix_decoder-int4_encoder-int8": 29.73,
+            "mix_decoder-int8_encoder-float16": 28.72,
+            "mix_decoder-int8_encoder-int8": 27.51
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 10.25,
+          "mix_decoder-float32_encoder-int4": 22.19,
+          "mix_decoder-float32_encoder-int8": 37.97,
+          "mix_decoder-int4_encoder-float16": 10.82,
+          "mix_decoder-int4_encoder-int4": 22.4,
+          "mix_decoder-int4_encoder-int8": 15.68,
+          "mix_decoder-int8_encoder-float16": 3.73,
+          "mix_decoder-int8_encoder-int4": 7.78,
+          "mix_decoder-int8_encoder-int8": 7.36
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 15.37,
+          "mix_decoder-float32_encoder-int8": 33.02,
+          "mix_decoder-int4_encoder-float16": 78.39,
+          "mix_decoder-int4_encoder-int8": 23.71,
+          "mix_decoder-int8_encoder-float16": 38.06,
+          "mix_decoder-int8_encoder-int8": 36.66
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 166.6,
+        "mix_decoder-float32_encoder-int4": 159.6,
+        "mix_decoder-float32_encoder-int8": 162.5,
+        "mix_decoder-int4_encoder-float16": 53.8,
+        "mix_decoder-int4_encoder-int4": 46.8,
+        "mix_decoder-int4_encoder-int8": 49.7,
+        "mix_decoder-int8_encoder-float16": 65.6,
+        "mix_decoder-int8_encoder-int4": 58.6,
+        "mix_decoder-int8_encoder-int8": 61.5
+      },
+      "failed": {
+        "webgpu": [
+          "mix_decoder-int4_encoder-float16"
+        ]
+      }
+    },
+    "tiny.en": {
+      "wer": {
+        "wasm": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 4.58,
+            "mix_decoder-float32_encoder-int4": 5.72,
+            "mix_decoder-float32_encoder-int8": 4.58,
+            "mix_decoder-int4_encoder-float16": 5.31,
+            "mix_decoder-int4_encoder-int4": 6.35,
+            "mix_decoder-int4_encoder-int8": 5.62,
+            "mix_decoder-int8_encoder-float16": 4.27,
+            "mix_decoder-int8_encoder-int4": 4.89,
+            "mix_decoder-int8_encoder-int8": 4.27
+          }
+        },
+        "webgpu": {
+          "en": {
+            "mix_decoder-float32_encoder-float16": 4.58,
+            "mix_decoder-float32_encoder-int8": 4.58,
+            "mix_decoder-int4_encoder-float16": 5.31,
+            "mix_decoder-int4_encoder-int8": 5.62,
+            "mix_decoder-int8_encoder-float16": 4.27,
+            "mix_decoder-int8_encoder-int8": 4.27
+          }
+        }
+      },
+      "rtf": {
+        "wasm": {
+          "mix_decoder-float32_encoder-float16": 11.91,
+          "mix_decoder-float32_encoder-int4": 20.59,
+          "mix_decoder-float32_encoder-int8": 38.88,
+          "mix_decoder-int4_encoder-float16": 9.7,
+          "mix_decoder-int4_encoder-int4": 22.09,
+          "mix_decoder-int4_encoder-int8": 17.67,
+          "mix_decoder-int8_encoder-float16": 6.41,
+          "mix_decoder-int8_encoder-int4": 8.18,
+          "mix_decoder-int8_encoder-int8": 7.93
+        },
+        "webgpu": {
+          "mix_decoder-float32_encoder-float16": 63.95,
+          "mix_decoder-float32_encoder-int8": 73.64,
+          "mix_decoder-int4_encoder-float16": 75.94,
+          "mix_decoder-int4_encoder-int8": 64.8,
+          "mix_decoder-int8_encoder-float16": 77.14,
+          "mix_decoder-int8_encoder-int8": 75.94
+        }
+      },
+      "size_mb": {
+        "mix_decoder-float32_encoder-float16": 166.6,
+        "mix_decoder-float32_encoder-int4": 159.5,
+        "mix_decoder-float32_encoder-int8": 162.3,
+        "mix_decoder-int4_encoder-float16": 53.4,
+        "mix_decoder-int4_encoder-int4": 46.3,
+        "mix_decoder-int4_encoder-int8": 49.0,
+        "mix_decoder-int8_encoder-float16": 64.8,
+        "mix_decoder-int8_encoder-int4": 57.6,
+        "mix_decoder-int8_encoder-int8": 60.4
+      },
+      "failed": {}
+    }
+  },
+  "choices": [
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (2.19 %, this one 2.29 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (2.29 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int4"
+        },
+        "rung": 6,
+        "wer": 2.19,
+        "rtf": 5.54,
+        "estimated": false
+      },
+      "reason": "fastest (5.54x real time) within 0.5 point of the best WER (2.08 %, this one 2.19 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 2.39,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 0.5 point of the best WER (2.08 %, this one 2.39 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int4"
+        },
+        "rung": 6,
+        "wer": 2.19,
+        "rtf": 5.54,
+        "estimated": false
+      },
+      "reason": "fastest (5.54x real time) within 0.5 point of the best WER (2.19 %, this one 2.19 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 2.39,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 0.5 point of the best WER (2.29 %, this one 2.39 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (2.19 %, this one 2.29 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 0.5 point of the best WER (2.29 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "quality",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 0.5 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "quality",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 0.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "base",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 3.12,
+        "rtf": 22.71,
+        "estimated": false
+      },
+      "reason": "fastest (22.71x real time) within 1.5 point of the best WER (1.98 %, this one 3.12 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "base",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 3.12,
+        "rtf": 22.71,
+        "estimated": false
+      },
+      "reason": "fastest (22.71x real time) within 1.5 point of the best WER (1.98 %, this one 3.12 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (2.19 %, this one 2.29 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (2.29 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "base",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 3.12,
+        "rtf": 22.71,
+        "estimated": false
+      },
+      "reason": "fastest (22.71x real time) within 1.5 point of the best WER (2.08 %, this one 3.12 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "base",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 3.12,
+        "rtf": 22.71,
+        "estimated": false
+      },
+      "reason": "fastest (22.71x real time) within 1.5 point of the best WER (2.08 %, this one 3.12 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 2.71,
+        "rtf": 5.9,
+        "estimated": false
+      },
+      "reason": "fastest (5.9x real time) within 1.5 point of the best WER (2.19 %, this one 2.71 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 2.39,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 1.5 point of the best WER (2.29 %, this one 2.39 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "base",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 3.12,
+        "rtf": 22.71,
+        "estimated": false
+      },
+      "reason": "fastest (22.71x real time) within 1.5 point of the best WER (1.98 %, this one 3.12 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "base",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 3.12,
+        "rtf": 22.71,
+        "estimated": false
+      },
+      "reason": "fastest (22.71x real time) within 1.5 point of the best WER (1.98 %, this one 3.12 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (2.19 %, this one 2.29 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (2.29 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "medium",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 8.04,
+        "rtf": 2.86,
+        "estimated": true
+      },
+      "reason": "fastest (2.86x real time) within 1.5 point of the best WER (6.97 %, this one 8.04 %); mix_decoder-int4_encoder-int4 not measured for medium, figures from the nearest precision"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (9.35 %, this one 10.36 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (9.35 %, this one 10.36 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 1.5 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 1.5 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 1.5 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 1.5 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "medium",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 8.04,
+        "rtf": 2.86,
+        "estimated": true
+      },
+      "reason": "fastest (2.86x real time) within 1.5 point of the best WER (6.97 %, this one 8.04 %); mix_decoder-int4_encoder-int4 not measured for medium, figures from the nearest precision"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (9.35 %, this one 10.36 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 1.5 point of the best WER (9.35 %, this one 10.36 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "balanced",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 1.5 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time) within 4 point of the best WER (1.98 %, this one 4.58 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time) within 4 point of the best WER (1.98 %, this one 4.58 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (2.19 %, this one 2.29 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (2.29 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time) within 4 point of the best WER (2.08 %, this one 4.58 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time) within 4 point of the best WER (2.08 %, this one 4.58 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 2.71,
+        "rtf": 5.9,
+        "estimated": false
+      },
+      "reason": "fastest (5.9x real time) within 4 point of the best WER (2.19 %, this one 2.71 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 2.39,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 4 point of the best WER (2.29 %, this one 2.39 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time) within 4 point of the best WER (1.98 %, this one 4.58 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time) within 4 point of the best WER (1.98 %, this one 4.58 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (2.19 %, this one 2.29 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (2.29 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (1.98 %, this one 2.29 %)"
+    },
+    {
+      "level": "fast",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (1.98 %, this one 2.29 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (6.97 %, this one 10.36 %)"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (6.97 %, this one 10.36 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (9.35 %, this one 10.36 %)"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (9.35 %, this one 10.36 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 4 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 4 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time) within 4 point of the best WER (9.35 %, this one 9.35 %); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time) within 4 point of the best WER (9.35 %, this one 9.35 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (6.97 %, this one 10.36 %)"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (6.97 %, this one 10.36 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (9.35 %, this one 10.36 %)"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time) within 4 point of the best WER (9.35 %, this one 10.36 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (6.97 %, this one 6.97 %)"
+    },
+    {
+      "level": "fast",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time) within 4 point of the best WER (6.97 %, this one 6.97 %); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 2.71,
+        "rtf": 5.9,
+        "estimated": false
+      },
+      "reason": "fastest (5.9x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 2.39,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny.en",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 4.58,
+        "rtf": 38.88,
+        "estimated": false
+      },
+      "reason": "fastest (38.88x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "en",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 2.29,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 29.59,
+        "rtf": 37.97,
+        "estimated": false
+      },
+      "reason": "fastest (37.97x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": null,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 29.59,
+        "rtf": 37.97,
+        "estimated": false
+      },
+      "reason": "fastest (37.97x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": null,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": null,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 29.59,
+        "rtf": 37.97,
+        "estimated": false
+      },
+      "reason": "fastest (37.97x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 600.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 29.59,
+        "rtf": 37.97,
+        "estimated": false
+      },
+      "reason": "fastest (37.97x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int4",
+          "decoder": "int4"
+        },
+        "rung": 8,
+        "wer": 9.35,
+        "rtf": 5.9,
+        "estimated": true
+      },
+      "reason": "fastest (5.9x real time); mix_decoder-int4_encoder-int4 not measured for small, figures from the nearest precision"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "int8"
+        },
+        "rung": 5,
+        "wer": 9.35,
+        "rtf": 1.96,
+        "estimated": false
+      },
+      "reason": "fastest (1.96x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 600.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": null,
+      "reason": ""
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": false,
+      "chosen": {
+        "model": "tiny",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 29.59,
+        "rtf": 37.97,
+        "estimated": false
+      },
+      "reason": "fastest (37.97x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": null,
+      "noisy": true,
+      "chosen": {
+        "model": "tiny",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 29.59,
+        "rtf": 37.97,
+        "estimated": false
+      },
+      "reason": "fastest (37.97x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": false,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "small",
+      "noisy": true,
+      "chosen": {
+        "model": "small",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 10.36,
+        "rtf": 7.81,
+        "estimated": false
+      },
+      "reason": "fastest (7.81x real time); noisy audio: no int4 half"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": false,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time)"
+    },
+    {
+      "level": "max_speed",
+      "language": "fr",
+      "memory": 4096.0,
+      "model": "large-v3-turbo",
+      "noisy": true,
+      "chosen": {
+        "model": "large-v3-turbo",
+        "precision": {
+          "encoder": "int8",
+          "decoder": "float32"
+        },
+        "rung": 1,
+        "wer": 6.97,
+        "rtf": 2.57,
+        "estimated": false
+      },
+      "reason": "fastest (2.57x real time); noisy audio: no int4 half"
+    }
+  ],
+  "retries": [
+    {
+      "model": "small",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": null,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int4"
+      }
+    },
+    {
+      "model": "small",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": 500.0,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int4"
+      }
+    },
+    {
+      "model": "small",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": null,
+      "rung": null
+    },
+    {
+      "model": "small",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": 500.0,
+      "rung": null
+    },
+    {
+      "model": "small",
+      "current": "int8",
+      "memory": null,
+      "rung": null
+    },
+    {
+      "model": "small",
+      "current": "int8",
+      "memory": 500.0,
+      "rung": null
+    },
+    {
+      "model": "base",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": null,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "base",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": 500.0,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "base",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": null,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "base",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": 500.0,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "base",
+      "current": "int8",
+      "memory": null,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "base",
+      "current": "int8",
+      "memory": 500.0,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "large-v3-turbo",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": null,
+      "rung": null
+    },
+    {
+      "model": "large-v3-turbo",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": 500.0,
+      "rung": null
+    },
+    {
+      "model": "large-v3-turbo",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": null,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "float32"
+      }
+    },
+    {
+      "model": "large-v3-turbo",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": 500.0,
+      "rung": null
+    },
+    {
+      "model": "large-v3-turbo",
+      "current": "int8",
+      "memory": null,
+      "rung": {
+        "encoder": "float16",
+        "decoder": "float32"
+      }
+    },
+    {
+      "model": "large-v3-turbo",
+      "current": "int8",
+      "memory": 500.0,
+      "rung": null
+    },
+    {
+      "model": "tiny",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": null,
+      "rung": {
+        "encoder": "int8",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "tiny",
+      "current": {
+        "encoder": "int4",
+        "decoder": "int4"
+      },
+      "memory": 500.0,
+      "rung": {
+        "encoder": "int8",
+        "decoder": "int8"
+      }
+    },
+    {
+      "model": "tiny",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": null,
+      "rung": null
+    },
+    {
+      "model": "tiny",
+      "current": {
+        "encoder": "int8",
+        "decoder": "int8"
+      },
+      "memory": 500.0,
+      "rung": null
+    },
+    {
+      "model": "tiny",
+      "current": "int8",
+      "memory": null,
+      "rung": null
+    },
+    {
+      "model": "tiny",
+      "current": "int8",
+      "memory": 500.0,
+      "rung": null
+    }
+  ],
+  "ladder": [
+    {
+      "encoder": "float16",
+      "decoder": "float32"
+    },
+    {
+      "encoder": "int8",
+      "decoder": "float32"
+    },
+    {
+      "encoder": "int4",
+      "decoder": "float32"
+    },
+    {
+      "encoder": "float16",
+      "decoder": "int8"
+    },
+    {
+      "encoder": "float16",
+      "decoder": "int4"
+    },
+    {
+      "encoder": "int8",
+      "decoder": "int8"
+    },
+    {
+      "encoder": "int8",
+      "decoder": "int4"
+    },
+    {
+      "encoder": "int4",
+      "decoder": "int8"
+    },
+    {
+      "encoder": "int4",
+      "decoder": "int4"
+    }
+  ],
+  "labels": {
+    "mix_decoder-float32_encoder-int8": {
+      "encoder": "int8",
+      "decoder": "float32"
+    }
+  }
+}

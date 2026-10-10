@@ -1,0 +1,57 @@
+{
+  "clean": {
+    "duration_s": 8.0,
+    "snr_estimate_db": 27.18,
+    "energy_above_telephone": 0.00011,
+    "bandwidth_hz": 1250.0,
+    "speech_level_dbfs": -15.67,
+    "peak_dbfs": -5.99,
+    "clipping_ratio": 0.0,
+    "silence_ratio": 0.0,
+    "longest_silence_s": 0.0
+  },
+  "bright": {
+    "duration_s": 8.0,
+    "snr_estimate_db": 27.17,
+    "energy_above_telephone": 0.07157,
+    "bandwidth_hz": 5031.2,
+    "speech_level_dbfs": -15.35,
+    "peak_dbfs": -4.58,
+    "clipping_ratio": 0.0,
+    "silence_ratio": 0.0,
+    "longest_silence_s": 0.0
+  },
+  "noisy": {
+    "duration_s": 8.0,
+    "snr_estimate_db": 9.47,
+    "energy_above_telephone": 0.08529,
+    "bandwidth_hz": 8000.0,
+    "speech_level_dbfs": -14.96,
+    "peak_dbfs": -3.85,
+    "clipping_ratio": 0.0,
+    "silence_ratio": 0.0,
+    "longest_silence_s": 0.0
+  },
+  "gaps": {
+    "duration_s": 8.0,
+    "snr_estimate_db": 31.49,
+    "energy_above_telephone": 0.00016,
+    "bandwidth_hz": 1296.9,
+    "speech_level_dbfs": -15.84,
+    "peak_dbfs": -5.99,
+    "clipping_ratio": 0.0,
+    "silence_ratio": 0.3375,
+    "longest_silence_s": 1.5
+  },
+  "clipped": {
+    "duration_s": 8.0,
+    "snr_estimate_db": 24.75,
+    "energy_above_telephone": 0.0011,
+    "bandwidth_hz": 7437.5,
+    "speech_level_dbfs": -5.47,
+    "peak_dbfs": 0.0,
+    "clipping_ratio": 0.136656,
+    "silence_ratio": 0.0,
+    "longest_silence_s": 0.0
+  }
+}

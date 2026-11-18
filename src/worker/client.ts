@@ -38,6 +38,11 @@ function joinAnalyses(parts: AudioOnlyAnalysis[]): AudioOnlyAnalysis {
 export interface WorkerTranscriberOptions extends WorkerLoadRequest {
   /** Where the built worker file lives. */
   url: string;
+  /**
+   * The worker file's digest (`sha256-<base64>`): required when it is served from another origin,
+   * where it runs from a Blob with this page's origin.
+   */
+  integrity?: string;
   logger?: Logger;
   /**
    * Run the analyses that need the audio only (speakers, emotion, events, music, speech, profile)
@@ -56,6 +61,7 @@ export class WorkerTranscriber {
     this.#client = new WorkerClient({
       url: options.url,
       name: "ynonnxweb-audio",
+      ...(options.integrity ? { integrity: options.integrity } : {}),
       ...(options.logger ? { logger: options.logger } : {}),
     });
   }
@@ -132,7 +138,9 @@ export class WorkerTranscriber {
         { transfer: [buffer], ...(onProgress ? { onProgress } : {}), ...(signal ? { signal } : {}) },
       );
     }
-
+    
+    
+    
     const prints = await this.speakerPrints().catch(() => ({}));
     const forTranscript = { ...options, analyze: analyses.filter((a) => !AUDIO_ONLY_ANALYSES.has(a)) };
     const transcriptBuffer = bufferOf(audio);
@@ -149,7 +157,12 @@ export class WorkerTranscriber {
             const key = wanted.join("+");
             let worker = this.#analysis.get(key);
             if (!worker) {
-              worker = new WorkerClient({ url: this.options.url, name: `ynonnxweb-audio-${key}`, ...(this.options.logger ? { logger: this.options.logger } : {}) });
+              worker = new WorkerClient({
+                url: this.options.url,
+                name: `ynonnxweb-audio-${key}`,
+                ...(this.options.integrity ? { integrity: this.options.integrity } : {}),
+                ...(this.options.logger ? { logger: this.options.logger } : {}),
+              });
               this.#analysis.set(key, worker);
             }
             const buffer = bufferOf(audio);
@@ -184,7 +197,7 @@ export class WorkerTranscriber {
         else onProgress?.(value);
       },
     });
-
+    
     const info = await Promise.race([ready, finished.then(() => ({ streamId: "", backend: "" }))]);
     return {
       ...info,

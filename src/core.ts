@@ -11,6 +11,7 @@ export {
 } from "./audio/mel.js";
 export type { MelConfig, MelResult } from "./audio/mel.js";
 
+
 export {
   WhisperTokens,
   SOT,
@@ -48,13 +49,18 @@ export {
   SectionState,
   MIN_SECTION_S,
   DEFAULT_OVERLAP_S,
+  LONE_STAMP_TAIL_S,
 } from "./whisper/schedule.js";
 export type { AudioInfo, Section, WindowResult } from "./whisper/schedule.js";
 
 export {
   extractSegments,
   mergeSegments,
+  resumePoint,
+  withoutRedecoded,
 } from "./whisper/segments.js";
+
+export { CREDIT_PATTERNS, MAX_CREDIT_WORDS, isCreditLine, isInventedLine, isNonSpeechLine } from "./whisper/invented.js";
 export type { Segment, SegmentsResult } from "./whisper/segments.js";
 
 export {

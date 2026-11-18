@@ -6,6 +6,12 @@ import { WINDOW_SECONDS } from "../audio/mel.js";
 export const MIN_SECTION_S = 90;
 export const DEFAULT_OVERLAP_S = 5;
 
+/**
+ * Seconds of window left after a lone final stamp below which the stamp is believed (the rest is
+ * silence) and the window skipped.
+ */
+export const LONE_STAMP_TAIL_S = 5;
+
 export interface AudioInfo {
   id: string;
   duration: number;
@@ -36,6 +42,15 @@ export interface WindowResult {
   isSilent: boolean;
   /** End of the last CLOSED segment, or null when the window closed none. */
   lastSegmentEnd: number | null;
+  /**
+   * Where the next window starts, when the engine read it off its own stamps (Whisper): the last
+   * closed stamp of a pair, the lone stamp the stream ends on, or the window's end when it emitted
+   * no stamp. Absent (Moonshine, which has no stamps): the scheduler falls back on
+   * `lastSegmentEnd`.
+   */
+  resumeAt?: number | null;
+  /** The stream ended on a lone stamp: the model says the rest of the window holds no speech. */
+  endsAlone?: boolean;
   temperature: number;
 }
 
@@ -222,8 +237,18 @@ export class WaveScheduler {
 
   /** Move the seek forward and update the carried context. */
   advance(state: SectionState, result: WindowResult): void {
-    const end = result.lastSegmentEnd;
-    const floor = state.seek + this.chunkS * 0.5;
+    let end: number | null;
+    let floor: number;
+    if (result.resumeAt !== undefined && result.resumeAt !== null) {
+      end = result.resumeAt;
+      floor = state.seek + 1;
+
+      const held = Math.min(state.seek + this.chunkS, state.section.end);
+      if (result.endsAlone && held - end < LONE_STAMP_TAIL_S) end = null;
+    } else {
+      end = result.lastSegmentEnd;
+      floor = state.seek + this.chunkS * 0.5;
+    }
     if (end === null || end <= floor) state.seek += this.chunkS;
     else state.seek = Math.min(end, state.seek + this.chunkS);
 

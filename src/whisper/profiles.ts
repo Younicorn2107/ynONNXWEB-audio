@@ -78,17 +78,25 @@ const ENGLISH_AUDIO_PROFILES: Readonly<
     speed: { noRepeatNgramSize: 3 },
     quality: { noRepeatNgramSize: 3 },
   },
-
-  "large-v3": {
-    default: { conditionOnPreviousText: false },
-    speed: { conditionOnPreviousText: false },
-    quality: { conditionOnPreviousText: false },
-  },
   "large-v3-turbo": {
     default: {},
 
     speed: { conditionOnPreviousText: false },
     quality: {},
+  },
+};
+
+/**
+ * Multilingual checkpoints whose profile was measured in English AND French: applied whatever the
+ * language, announced, detected or unknown.
+ */
+const EVERY_LANGUAGE_PROFILES: Readonly<
+  Record<string, Readonly<Record<DecodingProfile, ProfileSettings>>>
+> = {
+  "large-v3": {
+    default: { conditionOnPreviousText: false },
+    speed: { conditionOnPreviousText: false },
+    quality: { conditionOnPreviousText: false },
   },
 };
 
@@ -107,6 +115,8 @@ export function profileFor(
   const key = catalogueKey(modelKey);
   const englishOnly = PROFILES[key];
   if (englishOnly) return { ...(englishOnly[profile] ?? {}) };
+  const everyLanguage = EVERY_LANGUAGE_PROFILES[key];
+  if (everyLanguage) return { ...(everyLanguage[profile] ?? {}) };
   if (language === "en") return { ...(ENGLISH_AUDIO_PROFILES[key]?.[profile] ?? {}) };
   return {};
 }

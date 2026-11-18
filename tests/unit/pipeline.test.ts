@@ -17,8 +17,9 @@ import {
   isSilent,
   withTemperatureFallback,
 } from "../../src/whisper/quality.js";
-import { extractSegments, mergeSegments } from "../../src/whisper/segments.js";
+import { extractSegments, mergeSegments, resumePoint, withoutRedecoded, type Segment } from "../../src/whisper/segments.js";
 import {
+  LONE_STAMP_TAIL_S,
   MIN_SECTION_S,
   SectionScheduler,
   WaveScheduler,
@@ -374,6 +375,154 @@ describe("waves", () => {
     expect(state!.context).toEqual([]);
     waves.advance(state!, result(30, null));
     expect(state!.context).toEqual([1]);
+  });
+});
+
+describe("the resume point the engine names", () => {
+  const section = (start: number, end: number) => ({ audioId: "a", index: 0, start, end, windows: [[start, end]] as [number, number][] });
+  const resumed = (start: number, at: number, alone: boolean): WindowResult => ({
+    audioId: "a",
+    sectionIndex: 0,
+    windowStart: start,
+    tokens: [1],
+    text: "x",
+    avgLogprob: -0.2,
+    compressionRatio: 1.2,
+    noSpeechProb: 0.01,
+    isSilent: false,
+    lastSegmentEnd: at,
+    resumeAt: at,
+    endsAlone: alone,
+    temperature: 0,
+  });
+
+  it("resumes at the last closed stamp, even early in the window", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(50, 120)]);
+    waves.advance(state!, resumed(50, 57.2, false));
+    expect(state!.seek).toBeCloseTo(57.2);
+  });
+
+  it("does not believe a lone stamp with a long rest of window", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(50, 120)]);
+    waves.advance(state!, resumed(50, 57.2, true));
+    expect(state!.seek).toBeCloseTo(57.2);
+  });
+
+  it("believes a lone stamp near the end and skips the window", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(106, 123.6)]);
+    waves.advance(state!, resumed(106, 120.2, true));
+    expect(state!.done).toBe(true);
+  });
+
+  it("counts the tail against the section's end, not a full window", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(0, 40)]);
+    state!.seek = 20;
+    waves.advance(state!, resumed(20, 36, true));
+    expect(state!.done).toBe(true);
+  });
+
+  it("still asks for one second of progress", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(0, 120)]);
+    waves.advance(state!, resumed(0, 0.6, false));
+    expect(state!.seek).toBeCloseTo(30);
+  });
+
+  it("advances a full window when the engine names the window's end", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(0, 120)]);
+    waves.advance(state!, resumed(0, 30, false));
+    expect(state!.seek).toBeCloseTo(30);
+  });
+
+  it("keeps the half-window rule when no resume point is given (Moonshine)", () => {
+    const waves = new WaveScheduler();
+    const [state] = waves.states([section(0, 120)]);
+    waves.advance(state!, { ...resumed(0, 7, false), resumeAt: null });
+    expect(state!.seek).toBeCloseTo(30);
+  });
+
+  it("tail threshold is five seconds", () => {
+    expect(LONE_STAMP_TAIL_S).toBe(5);
+  });
+});
+
+describe("reading the resume point off the stamps", () => {
+  const ts = (seconds: number): number => 200 + Math.round(seconds / 0.02);
+
+  it("is the lone stamp the stream ends on", () => {
+    expect(resumePoint([ts(0), 0, ts(0.2), ts(0.2), 1, ts(0.4)], tokens)).toEqual({ resumeAt: 0.4, endsAlone: true });
+  });
+
+  it("is the closing stamp of the last pair when an unclosed tail follows", () => {
+    const point = resumePoint([ts(0), 0, ts(0.2), ts(0.24), 1, 2], tokens);
+    expect(point.resumeAt).toBeCloseTo(0.2);
+    expect(point.endsAlone).toBe(false);
+  });
+
+  it("is the closing stamp of a final pair", () => {
+    const point = resumePoint([ts(0), 0, ts(0.3), ts(0.3)], tokens);
+    expect(point.resumeAt).toBeCloseTo(0.3);
+    expect(point.endsAlone).toBe(false);
+  });
+
+  it("is the window's end with no stamp at all", () => {
+    expect(resumePoint([0, 1], tokens)).toEqual({ resumeAt: 30, endsAlone: false });
+    expect(resumePoint([], tokens)).toEqual({ resumeAt: 30, endsAlone: false });
+  });
+
+  it("is the window's end when the only stamp opens the window", () => {
+    expect(resumePoint([ts(0), 0, 1], tokens)).toEqual({ resumeAt: 30, endsAlone: false });
+  });
+
+  it("matches the Python engine on every short stream", () => {
+    const reference = (ids: number[]) => {
+      const stamp = ids.map((t) => t >= 200);
+      const n = ids.length;
+      const alone = n >= 2 && stamp[n - 1]! && !stamp[n - 2]!;
+      if (alone) return { resumeAt: (ids[n - 1]! - 200) * 0.02, endsAlone: true };
+      const pairs = ids.slice(0, -1).map((_, i) => i).filter((i) => stamp[i] && stamp[i + 1]);
+      if (pairs.length === 0) return { resumeAt: 30, endsAlone: false };
+      return { resumeAt: (ids[pairs.at(-1)!]! - 200) * 0.02, endsAlone: false };
+    };
+    const alphabet = [0, 1, ts(0.1), ts(0.5)];
+    const streams: number[][] = [[]];
+    for (let length = 1; length <= 5; length += 1) {
+      for (const previous of streams.filter((s) => s.length === length - 1)) {
+        for (const id of alphabet) streams.push([...previous, id]);
+      }
+    }
+    for (const ids of streams) {
+      const got = resumePoint(ids, tokens);
+      const want = reference(ids);
+      expect(got.endsAlone).toBe(want.endsAlone);
+      expect(got.resumeAt).toBeCloseTo(want.resumeAt);
+    }
+  });
+});
+
+describe("the tail a window leaves to the next one", () => {
+  const seg = (start: number, end: number, text: string): Segment => ({ start, end, text, tokens: [] });
+
+  it("drops the unclosed tail the next window decodes again", () => {
+    const kept = withoutRedecoded([
+      { start: 0, segments: [seg(0, 6, "first"), seg(6, 12.4, "second"), seg(12.4, 12.4, "and then")] },
+      { start: 12.4, segments: [seg(12.4, 15, "and then we left")] },
+    ]);
+    expect(kept[0]!.map((s) => s.text)).toEqual(["first", "second"]);
+    expect(kept[1]!.map((s) => s.text)).toEqual(["and then we left"]);
+  });
+
+  it("keeps the last window whole, and a window followed a full window later", () => {
+    const kept = withoutRedecoded([
+      { start: 0, segments: [seg(0, 0, "no stamps at all")] },
+      { start: 30, segments: [seg(30, 31, "tail")] },
+    ]);
+    expect(kept.flat().map((s) => s.text)).toEqual(["no stamps at all", "tail"]);
   });
 });
 

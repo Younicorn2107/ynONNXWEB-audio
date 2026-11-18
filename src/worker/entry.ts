@@ -1,6 +1,6 @@
 /** The transcription worker: everything heavy, off the main thread. */
 
-import { registerTask, serve } from "@youni/onnxweb-core";
+import { pinnedLocations, registerTask, serve } from "@youni/onnxweb-core";
 
 import { AudioAnalyzer, type AudioOnlyAnalysis } from "../analysis/analyzer.js";
 import { AudioTranscriber, type TranscriberOptions, type TranscriberStreamOptions } from "../whisper/transcriber.js";
@@ -45,8 +45,19 @@ export interface WorkerAudioRequest extends WorkerLoadRequest {
   options?: Options;
 }
 
+
 /** One transcriber, kept between calls. */
 let current: { key: string; transcriber: AudioTranscriber } | null = null;
+
+/**
+ * Where this worker loads code and models from: set by the first request, fixed for the worker's
+ * life. `wasmPaths` is where onnxruntime-web imports its glue from, so a request that could move it
+ * would run any script in the page's origin; `endpoint`, `resolverBase` and `hub` pick the graph.
+ * The page's `WorkerTranscriber` sends the same ones every time; another source is another worker.
+ */
+const pin = pinnedLocations();
+const pinRequest = (request: WorkerLoadRequest): void =>
+  pin({ wasmPaths: request.wasmPaths, endpoint: request.endpoint, resolverBase: request.resolverBase, hub: request.hub });
 
 /**
  * The library's log, sent to the page as progress (`{ log: { level, message } }`) of whichever task
@@ -58,6 +69,12 @@ const forward = (level: "info" | "warn" | "error") => (message: string) => repor
 const workerLogger = { debug: () => undefined, info: forward("info"), warn: forward("warn"), error: forward("error") };
 
 async function transcriberFor(request: WorkerLoadRequest, onProgress?: (progress: unknown) => void): Promise<AudioTranscriber> {
+  
+  
+  
+  
+  
+  
   const key = JSON.stringify([
     request.model,
     request.backends,
@@ -69,11 +86,14 @@ async function transcriberFor(request: WorkerLoadRequest, onProgress?: (progress
     request.profile,
     request.language,
   ]);
+  pinRequest(request);
   if (current?.key === key) return current.transcriber;
 
   await current?.transcriber.close();
   current = null;
 
+  
+  
   const ort = await import("onnxruntime-web");
   const { huggingFaceResolver, serverResolver } = await import("@youni/onnxweb-core");
   const hub = request.hub;
@@ -118,6 +138,7 @@ registerTask<WorkerLoadRequest, { backend: string; melBands: number; resolution:
 
 /** What `auto` would decide, without loading anything. */
 registerTask<WorkerLoadRequest, Resolution | null>("resolve", async (request) => {
+  pinRequest(request);
   const ort = await import("onnxruntime-web");
   return AudioTranscriber.resolve({ ort: ort as never, Tensor: ort.Tensor as never, ...request } as TranscriberOptions);
 });
@@ -173,7 +194,7 @@ registerTask<WorkerAudioRequest, TranscriptionResult>(
     const audio = new Float32Array(request.audio);
     return transcriber.transcribe(audio, {
       ...(request.options as TranscribeOptions),
-
+      
       signal: helpers.signal,
       onProgress: (progress) => helpers.progress(progress),
     });
@@ -190,6 +211,8 @@ registerTask<{ audio: ArrayBuffer; analyses: string[]; options?: Options; prints
   "analyze_audio",
   async (request, helpers) => {
     report = (p) => helpers.progress(p);
+    
+    pin({ wasmPaths: request.wasmPaths });
     if (!analyzer) {
       const ort = await import("onnxruntime-web");
       if (request.wasmPaths) (ort.env.wasm as { wasmPaths?: string }).wasmPaths ??= request.wasmPaths;
@@ -200,6 +223,12 @@ registerTask<{ audio: ArrayBuffer; analyses: string[]; options?: Options; prints
   },
 );
 
+
+
+
+
+
+
 const sessions = new Map<string, { session: StreamSession; done: (result: StreamResult) => void }>();
 
 registerTask<WorkerLoadRequest & { key: string; stream: Omit<TranscriberStreamOptions, "onUpdate" | "signal" | "loadOptions"> }, StreamResult>("stream", async (request, helpers) => {
@@ -207,7 +236,7 @@ registerTask<WorkerLoadRequest & { key: string; stream: Omit<TranscriberStreamOp
   const transcriber = await transcriberFor(request, (p) => helpers.progress(p));
   const session = await transcriber.stream({
     ...request.stream,
-
+    
     loadOptions: {
       ...(request.endpoint ? { endpoint: request.endpoint } : {}),
       ...(request.backends ? { backends: request.backends as never } : {}),

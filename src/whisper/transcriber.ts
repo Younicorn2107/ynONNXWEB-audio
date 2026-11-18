@@ -32,7 +32,8 @@ import {
   type QualityConfig,
 } from "./quality.js";
 import { TimestampRules } from "./rules.js";
-import { extractSegments, mergeSegments, type Segment } from "./segments.js";
+import { isInventedLine } from "./invented.js";
+import { extractSegments, mergeSegments, resumePoint, withoutRedecoded, type Segment } from "./segments.js";
 import { SectionScheduler, WaveScheduler, type AudioInfo, type SectionState, type WindowResult } from "./schedule.js";
 import { WhisperTokens } from "./tokens.js";
 import { MOONSHINE_REPOS, asRoles, isPublished, moonshineSource, publishedSource, type HalfPrecision } from "./published.js";
@@ -785,21 +786,27 @@ export class AudioTranscriber {
     const assembled = audios.map((_, i) => {
       const windows = states.filter((st) => index.get(st.audioId) === i).flatMap((st) => st.results).sort((a, b) => a.sectionIndex - b.sectionIndex || a.windowStart - b.windowStart);
       const map = maps[i] ?? null;
-      const merged = mergeSegments(
-        windows
-          .filter((r) => !r.isSilent)
-          .map((r) =>
-            this.#segmentsOf(r, decodedAudios[i]!).map((segment) => ({
-              ...segment,
-              avgLogprob: r.avgLogprob,
-              compressionRatio: r.compressionRatio,
-              noSpeechProb: r.noSpeechProb,
-              temperature: r.temperature,
-              speaker: null,
-              words: null,
-            })),
-          ),
-      ).map((segment, id) => ({ ...segment, id }));
+      const groups: Segment[][] = [];
+      for (const section of new Set(windows.map((r) => r.sectionIndex))) {
+        const own = windows.filter((r) => r.sectionIndex === section);
+        const parsed = own.map((r) => ({
+          start: r.windowStart,
+          segments: r.isSilent
+            ? []
+            : this.#segmentsOf(r, decodedAudios[i]!).map((segment) => ({
+                ...segment,
+                avgLogprob: r.avgLogprob,
+                compressionRatio: r.compressionRatio,
+                noSpeechProb: r.noSpeechProb,
+                temperature: r.temperature,
+                speaker: null,
+                words: null,
+              })),
+        }));
+
+        groups.push(...withoutRedecoded(parsed).map((segments) => segments.filter((s) => !isInventedLine(s.text, languages[i]!.language))));
+      }
+      const merged = mergeSegments(groups).map((segment, id) => ({ ...segment, id }));
       return { i, merged, map, windows };
     });
 
@@ -1186,6 +1193,7 @@ export class AudioTranscriber {
           noSpeechProb: score.noSpeechProb,
           isSilent: isSilent(score.noSpeechProb, score.avgLogprob, quality),
           lastSegmentEnd: score.lastEnd === null ? null : plan.state.seek + score.lastEnd,
+          ...(score.resume ? { resumeAt: plan.state.seek + score.resume.resumeAt, endsAlone: score.resume.endsAlone } : {}),
           temperature,
         };
       }
@@ -1265,7 +1273,7 @@ export class AudioTranscriber {
       const text = this.tokenizer
         .decode(ids.filter((t) => t !== MOONSHINE_BOS && t !== MOONSHINE_EOS), { skipSpecialTokens: true })
         .trim();
-      return { ids, text, lastEnd: null, avgLogprob: out.avgLogprob[row] ?? 0, compressionRatio: await compressionRatio(text), noSpeechProb: 0 };
+      return { ids, text, lastEnd: null, resume: null, avgLogprob: out.avgLogprob[row] ?? 0, compressionRatio: await compressionRatio(text), noSpeechProb: 0 };
     }
     const parsed = extractSegments(ids, this.tokens, this.tokenizer, 0);
     const noSpeech = this.tokens.noSpeech;
@@ -1273,6 +1281,7 @@ export class AudioTranscriber {
       ids,
       text: parsed.text,
       lastEnd: parsed.lastEnd,
+      resume: resumePoint(ids, this.tokens),
       avgLogprob: out.avgLogprob[row] ?? 0,
       compressionRatio: await compressionRatio(parsed.text),
       noSpeechProb: noSpeech !== null ? (out.firstStepProbsPerRow[row]?.[noSpeech] ?? 0) : 0,

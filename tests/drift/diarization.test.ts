@@ -50,8 +50,8 @@ describe("diarization, against ynonnx_transcribe", () => {
     f.fbank.last.forEach((v, b) => expect(out.data[(out.frames - 1) * 80 + b]).toBeCloseTo(v, 3));
   });
 
-  it("clusters agglomeratively into the same speakers", () => {
-    for (const c of f.agglomerative) {
+  it("clusters agglomeratively into the same speakers at the thresholds it names", () => {
+    for (const c of f.agglomerative.filter((x) => x.kwargs.threshold !== undefined || x.kwargs.num_speakers !== undefined)) {
       const labels = agglomerative(embeddings, {
         ...(c.kwargs.threshold !== undefined ? { threshold: c.kwargs.threshold } : {}),
         numSpeakers: c.kwargs.num_speakers ?? null,

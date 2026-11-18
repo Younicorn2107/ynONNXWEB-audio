@@ -1,6 +1,7 @@
 /** Turning a token stream into timed segments. */
 
 import type { Word } from "../alignment/punctuation.js";
+import { WINDOW_SECONDS } from "../audio/mel.js";
 import { TIME_PRECISION, type WhisperTokens } from "./tokens.js";
 import type { Tokenizer } from "@youni/onnxweb-core/core";
 
@@ -87,6 +88,38 @@ export function extractSegments(
     .trim();
 
   return { segments, text, lastEnd };
+}
+
+/**
+ * Where the next window should start, in seconds from this window's start, read off the stamps (the
+ * Python engine's `_resume_at` and `ends_alone`).
+ */
+export function resumePoint(
+  ids: readonly number[],
+  tokens: WhisperTokens,
+  windowS: number = WINDOW_SECONDS,
+): { resumeAt: number; endsAlone: boolean } {
+  const n = ids.length;
+  const stamp = ids.map((id) => tokens.isTimestamp(id));
+  if (n >= 2 && stamp[n - 1] && !stamp[n - 2]) {
+    return { resumeAt: tokens.timeOf(ids[n - 1]!)!, endsAlone: true };
+  }
+  for (let i = n - 2; i >= 0; i -= 1) {
+    if (stamp[i] && stamp[i + 1]) return { resumeAt: tokens.timeOf(ids[i]!)!, endsAlone: false };
+  }
+  return { resumeAt: windowS, endsAlone: false };
+}
+
+/**
+ * The segments of a section's windows, without the ones the next window of the same section decodes
+ * again.
+ */
+export function withoutRedecoded(windows: readonly { start: number; segments: Segment[] }[]): Segment[][] {
+  return windows.map(({ segments }, i) => {
+    const next = windows[i + 1]?.start;
+    if (next === undefined) return segments;
+    return segments.filter((segment) => segment.start < next - TIME_PRECISION / 2);
+  });
 }
 
 /** Merge overlapping segments from consecutive windows. */

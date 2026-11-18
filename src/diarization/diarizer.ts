@@ -4,7 +4,7 @@ import { huggingFaceResolver, loadModel, type LoadOptions, type ModelBundle, typ
 import type { TensorFactory } from "@youni/onnxweb-core/core";
 
 import { DiarizationError, EnrollmentError } from "../errors.js";
-import { agglomerative, relabelByFirstAppearance, spectral } from "./clustering.js";
+import { DEFAULT_CLUSTER_THRESHOLD, absorbSmallClusters, agglomerative, relabelByFirstAppearance, spectral } from "./clustering.js";
 import { fbank } from "./fbank.js";
 
 export const DEFAULT_EMBEDDING_MODEL = "onnx-community/wespeaker-voxceleb-resnet34-LM";
@@ -65,12 +65,18 @@ export function displayName(speakerId: string, name?: string | null): string {
 export const ENROLLED_MATCH_THRESHOLD = 0.5;
 
 /**
- * Where agglomerative clustering stops: 0.5 average cosine similarity. The prints here are of short
- * overlapping windows (`chunkSpeech`), noisier than the long speaker-change chunks the Python side
- * embeds with 0.7: at 0.7 one voice came out as 22 speakers (a 70 s talk; Python: 2) and a
- * three-voice dialogue as 12; at 0.5, 2 and 4, every turn of the dialogue still pure.
+ * Where agglomerative clustering stops: 0.3 average cosine similarity, with the clusters under
+ * `MIN_SPEAKER_SECONDS` absorbed (see `DEFAULT_CLUSTER_THRESHOLD`: VoxConverse dev, DER 40.8 / 43.8
+ * % at 0.5 → 7.2 / 4.2 %). The prints are of short overlapping chunks, so noisy: a higher threshold
+ * splits one voice into many speakers.
  */
-export const CLUSTER_THRESHOLD = 0.5;
+export const CLUSTER_THRESHOLD = DEFAULT_CLUSTER_THRESHOLD;
+/**
+ * A cluster holding less speech than this (seconds, the union of its chunks) is merged into the
+ * closest real speaker: a laugh, a cough, a short word on its own. Not when the caller imposes the
+ * speaker count.
+ */
+export const MIN_SPEAKER_SECONDS = 5;
 
 export interface DiarizationConfig {
   /**
@@ -87,8 +93,13 @@ export interface DiarizationConfig {
   segmentationModel?: string;
   embeddingModel?: string;
   clustering?: "agglomerative" | "spectral";
-  /** Agglomerative clustering: merge while the average similarity stays above this (0.5). */
+  /** Agglomerative clustering: merge while the average similarity stays at or above this (0.3). */
   threshold?: number;
+  /**
+   * Clusters with less speech than this (seconds) join the closest speaker; 0 keeps them. Ignored
+   * with `numSpeakers`.
+   */
+  minSpeakerSeconds?: number;
   /**
    * With enrolled speakers: `chunk` names each chunk after the closest print above `matchThreshold`
    * and clusters only the rest (two similar voices are not merged first); `cluster` clusters
@@ -141,10 +152,10 @@ export function chunkSpeech(spans: readonly [number, number][], chunkS = CHUNK_S
 }
 
 /**
- * (span, label) pairs merged into ordered turns: consecutive spans of one speaker within half a
- * second join.
+ * (span, label) pairs merged into ordered turns: consecutive spans of one speaker less than
+ * `mergeGap` apart join.
  */
-export function toTurns(spans: readonly [number, number][], labels: readonly number[], names: ReadonlyMap<number, string> = new Map(), mergeGap = 0.5): SpeakerTurn[] {
+export function toTurns(spans: readonly [number, number][], labels: readonly number[], names: ReadonlyMap<number, string> = new Map(), mergeGap = MERGE_GAP_SECONDS): SpeakerTurn[] {
   const paired = spans.map((span, i) => [span, labels[i]!] as const).sort((a, b) => a[0][0] - b[0][0]);
   const turns: SpeakerTurn[] = [];
   for (const [[start, end], label] of paired) {
@@ -352,7 +363,7 @@ export class SpeakerDiarizer {
     const known = c.knownSpeakers && Object.keys(c.knownSpeakers).length > 0 ? c.knownSpeakers : null;
     if (known && (c.enrolledAssignment ?? "chunk") === "chunk") return this.#assignToPrints(kept, embeddings, known, c.matchThreshold ?? ENROLLED_MATCH_THRESHOLD);
     if (kept.length === 1) return this.#finish(kept, [0], embeddings, known ? matchEnrolled(embeddings, [0], known, c.matchThreshold) : new Map(), known);
-    const labels =
+    const clustered =
       c.clustering === "spectral"
         ? spectral(embeddings, { numSpeakers: c.numSpeakers ?? null, maxSpeakers: c.maxSpeakers || 8 })
         : agglomerative(embeddings, {
@@ -361,7 +372,17 @@ export class SpeakerDiarizer {
             minSpeakers: c.minSpeakers ?? null,
             maxSpeakers: c.maxSpeakers ?? null,
           });
+    const labels = this.#absorb(embeddings, clustered, kept);
     return this.#finish(kept, labels, embeddings, known ? matchEnrolled(embeddings, labels, known, c.matchThreshold) : new Map(), known);
+  }
+
+  /**
+   * Clusters with too little speech merged into the closest speaker, unless the caller fixed the
+   * count.
+   */
+  #absorb(embeddings: readonly Float32Array[], labels: readonly number[], kept: readonly [number, number][]): number[] {
+    if (this.config.numSpeakers !== null && this.config.numSpeakers !== undefined) return [...labels];
+    return absorbSmallClusters(embeddings, labels, kept, this.config.minSpeakerSeconds ?? MIN_SPEAKER_SECONDS);
   }
 
   /** The similarity of each named speaker to its print, from the last `diarize()`. */
@@ -417,7 +438,7 @@ export class SpeakerDiarizer {
       const rest = unknown.length === 1 ? [0] : agglomerative(unknown.map((i) => embeddings[i]!), { threshold: c.threshold ?? CLUSTER_THRESHOLD, maxSpeakers: c.maxSpeakers ?? null });
       unknown.forEach((i, k) => (labels[i] = names.length + rest[k]!));
     }
-    return this.#finish(kept, labels, embeddings, nameOf, known);
+    return this.#finish(kept, this.#absorb(embeddings, labels, kept), embeddings, nameOf, known);
   }
 
   /**

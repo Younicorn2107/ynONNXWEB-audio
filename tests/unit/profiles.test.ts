@@ -38,18 +38,29 @@ describe("decoding profiles", () => {
 
 describe("profiles depend on the language", () => {
   it("gives a multilingual model its profile on English audio", () => {
-    expect(profileFor("whisper-large-v3", "default", "en")).toEqual({
+    expect(profileFor("whisper-small", "default", "en")).toEqual({
       conditionOnPreviousText: false,
     });
   });
 
   it("gives a multilingual model the stock settings in French", () => {
-    expect(profileFor("whisper-large-v3", "default", "fr")).toEqual({});
+    expect(profileFor("whisper-small", "default", "fr")).toEqual({});
+    expect(profileFor("whisper-large-v3-turbo", "default", "fr")).toEqual({});
   });
 
   it("does not assume English when the language is unknown", () => {
-    expect(profileFor("whisper-large-v3")).toEqual({});
-    expect(profileFor("whisper-large-v3", "default", null)).toEqual({});
+    expect(profileFor("whisper-small")).toEqual({});
+    expect(profileFor("whisper-small", "default", null)).toEqual({});
+  });
+
+  it("cuts large-v3's context in every language, measured in English and French", () => {
+    for (const language of ["en", "fr", "de", null]) {
+      for (const role of ["default", "speed", "quality"] as const) {
+        expect(profileFor("whisper-large-v3_fp16", role, language)).toEqual({ conditionOnPreviousText: false });
+      }
+    }
+
+    expect(profileFor("whisper-large-v3-turbo", "default", "en")).toEqual({});
   });
 
   it("ignores the language for an English-only checkpoint", () => {
